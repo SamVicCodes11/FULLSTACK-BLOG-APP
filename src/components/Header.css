@@ -118,12 +118,21 @@
     width: var(--container-width-md);
   }
 
+
+  .show-nav {
+    display: block;
+  }
+
+  .hide-nav {
+    display: none;
+  }
+
   .nav_lists {
     position: fixed;
     top: 4.5rem;
     right: 5%;
-    display: block;
-    display: none;
+    /* display: block; */
+    /* display: none; */
   }
 
   .navbar ul {

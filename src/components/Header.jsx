@@ -1,22 +1,47 @@
 import { Link } from "react-router-dom";
-import { FaBars } from "react-icons/fa6";
-import { IoClose } from "react-icons/io5";
+// import { FaBars } from "react-icons/fa6";
+// import { IoClose } from "react-icons/io5";
 import "./Header.css";
 import navImage from "../images/MY PIC.jpg";
+import { useEffect, useState } from "react";
 
 
+import { FaBars } from "react-icons/fa";
+import { IoCloseSharp } from "react-icons/io5";
 
 const Header = () => {
+  const [isNavShowing, setIsNavShowing] = useState(false);
+
+  // Close the nav menu when clicking outside of it
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      const navContainer = document.querySelector(".nav-container");
+
+      // If the click was outside the nav container, close the menu
+      if (navContainer && !navContainer.contains(event.target)) {
+        setIsNavShowing(false);
+      }
+    };
+
+    // Add event listener to detect clicks outside of nav
+    document.addEventListener("mousedown", handleClickOutside);
+
+    // Clean up event listener on component unmount
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
+
   return (
     <header className="navbar">
       <div className="container navbar_container">
-        <Link to="/">
+        <Link to="/" onClick={() => setIsNavShowing(false)}>
           <h3>
             SAMVIC <span className="codes">CODES</span>
           </h3>
         </Link>
 
-        <div className="nav_lists">
+        <div  className={`nav_lists ${isNavShowing ? "show-nav" : "hide-nav"}`}>
           <ul>
             <li>
               <Link to="/blog">Blog</Link>
@@ -58,11 +83,18 @@ const Header = () => {
           </div>
         </div>
 
-        <button className="nav_menubar">
+        {/* <button className="nav_menubar">
           <FaBars />
         </button>
         <button className="nav_close">
           <IoClose />
+        </button> */}
+
+        <button
+          className="nav-toggle-btn"
+          onClick={() => setIsNavShowing((prev) => !prev)}
+        >
+          {isNavShowing ? <IoCloseSharp /> : <FaBars />}
         </button>
       </div>
     </header>
