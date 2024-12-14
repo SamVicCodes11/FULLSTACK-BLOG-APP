@@ -17,6 +17,9 @@ const AddPost = () => {
           <select name="" id="">
             <option value="">food</option>
             <option value="">wildlife</option>
+            <option value="">Sports</option>
+            <option value="">Politics</option>
+            <option value="">Programming</option>
           </select>
 
           <textarea name="" rows="5" id="" placeholder="Body"></textarea>
@@ -27,7 +30,7 @@ const AddPost = () => {
           </div>
 
           <div className="cho_pic">
-            <label htmlFor="cho_pic">Upload your picture</label>
+            <label htmlFor="cho_pic">Upload a picture</label>
             <input type="file" name="" id="cho_pic" />
           </div>
 

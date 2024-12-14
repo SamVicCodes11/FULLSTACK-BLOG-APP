@@ -5,7 +5,6 @@ import "./Header.css";
 import navImage from "../images/MY PIC.jpg";
 import { useEffect, useState } from "react";
 
-
 import { FaBars } from "react-icons/fa";
 import { IoCloseSharp } from "react-icons/io5";
 
@@ -15,7 +14,7 @@ const Header = () => {
   // Close the nav menu when clicking outside of it
   useEffect(() => {
     const handleClickOutside = (event) => {
-      const navContainer = document.querySelector(".nav-container");
+      const navContainer = document.querySelector(".navbar_container");
 
       // If the click was outside the nav container, close the menu
       if (navContainer && !navContainer.contains(event.target)) {
@@ -41,26 +40,38 @@ const Header = () => {
           </h3>
         </Link>
 
-        <div  className={`nav_lists ${isNavShowing ? "show-nav" : "hide-nav"}`}>
+        <div className={`nav_lists ${isNavShowing ? "show-nav" : "hide-nav"}`}>
           <ul>
             <li>
-              <Link to="/blog">Blog</Link>
+              <Link to="/blog" onClick={() => setIsNavShowing(false)}>
+                Blog
+              </Link>
             </li>
             <li>
-              <Link to="createpost">Create Post</Link>
+              <Link to="createpost" onClick={() => setIsNavShowing(false)}>
+                Create Post
+              </Link>
             </li>
             <li>
-              <Link to="authors">Authors</Link>
+              <Link to="authors" onClick={() => setIsNavShowing(false)}>
+                Authors
+              </Link>
             </li>
             <li>
-              <Link to="/about">About</Link>
+              <Link to="/about" onClick={() => setIsNavShowing(false)}>
+                About
+              </Link>
             </li>
 
             <li>
-              <Link to="/contact">Contact</Link>
+              <Link to="/contact" onClick={() => setIsNavShowing(false)}>
+                Contact
+              </Link>
             </li>
             <li>
-              <Link to="/login">Log In</Link>
+              <Link to="/login" onClick={() => setIsNavShowing(false)}>
+                Log In
+              </Link>
             </li>
           </ul>
 
@@ -70,13 +81,13 @@ const Header = () => {
             </div>
 
             <div className="info_pages">
-              <Link to="/profile">
+              <Link to="/profile" onClick={() => setIsNavShowing(false)}>
                 <span>Profile</span>
               </Link>
-              <Link to="dashboard">
+              <Link to="dashboard" onClick={() => setIsNavShowing(false)}>
                 <span>Dashboard</span>
               </Link>
-              <Link to="/logout">
+              <Link to="/logout" onClick={() => setIsNavShowing(false)}>
                 <span>Logout</span>
               </Link>
             </div>

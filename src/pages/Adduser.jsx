@@ -12,12 +12,23 @@ const AddCategory = () => {
           </div>
 
           <input type="text" name="" id="" placeholder="First Name" />
-          <input type="text" name="" id="" placeholder="Last Name" />
+          <input type="text" name="" id="" placeholder="Username" />
+
+          <input type="email" name="" id="" placeholder="Email" />
+          <input type="password" name="" id="" placeholder="Password" />
+
+          <input type="password" name="" id="" placeholder="Confirm password" />
+
           <p>User Role</p>
           <select name="" id="">
             <option value="">Author</option>
             <option value="">Admin</option>
           </select>
+
+          <div className="cho_pic">
+            <label htmlFor="cho_pic">User Avatar</label>
+            <input type="file" name="" id="cho_pic" />
+          </div>
 
           <Link className="btn">Add</Link>
         </form>

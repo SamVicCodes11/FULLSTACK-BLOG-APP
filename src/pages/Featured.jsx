@@ -19,7 +19,7 @@ const Featured = () => {
               </Link>
 
               <div className="featured_right">
-                <Link to="categorypage" className="category_btn">
+                <Link to="/category" className="category_btn">
                   {category}
                 </Link>
 

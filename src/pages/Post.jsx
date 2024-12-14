@@ -16,6 +16,9 @@ const Post = () => {
 
             const postTitle =
               title.length > 30 ? title.substring(0, 30) + "..." : title;
+
+
+              
             return (
               <PostItem
                 key={id}

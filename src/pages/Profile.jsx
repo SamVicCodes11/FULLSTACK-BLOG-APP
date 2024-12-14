@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { FaBars } from "react-icons/fa6";
 import { IoClose } from "react-icons/io5";
 import profileImage from "../images/MY PIC.jpg";
+import { IoMdCheckmarkCircle } from "react-icons/io";
 
 import { useState } from "react";
 // import Dashboard from "./Dashboard";
@@ -28,7 +29,8 @@ const Profile = () => {
           </div>
 
           <i>
-            <FaBars />
+          <IoMdCheckmarkCircle />
+
           </i>
         </div>
 

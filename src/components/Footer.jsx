@@ -1,87 +1,85 @@
 import React from "react";
 import "./Footer.css";
 
-
 import { FaFacebookF } from "react-icons/fa6";
 import { FaLinkedinIn } from "react-icons/fa6";
 import { BsWhatsapp } from "react-icons/bs";
 import { FaXTwitter } from "react-icons/fa6";
 
-
 const Footer = () => {
   return (
     <>
       <footer>
+        <ul className="links icon-links">
+          <li>
+            <a
+              href="https://www.facebook.com/akpobasa.victor?mibextid=rS40aB7S9Ucbxw6v"
+              target="_blank"
+              rel="noreferrer noopener"
+            >
+              <FaFacebookF />
+            </a>
+          </li>
 
-          <ul className="links icon-links">
-              <li>
-                <a
-                  href="https://www.facebook.com/akpobasa.victor?mibextid=rS40aB7S9Ucbxw6v"
-                  target="_blank"
-                  rel="noreferrer noopener"
-                >
-                  <FaFacebookF />
-                </a>
-              </li>
+          <li>
+            <a
+              href="https://www.linkedin.com/in/samviccodes"
+              target="_blank"
+              rel="noreferrer noopener"
+            >
+              <FaLinkedinIn />
+            </a>
+          </li>
 
-              <li>
-                <a
-                  href="https://www.linkedin.com/in/samviccodes"
-                  target="_blank"
-                  rel="noreferrer noopener"
-                >
-                  <FaLinkedinIn />
-                </a>
-              </li>
+          <li>
+            <a
+              href="https://wa.me/2348146557494"
+              target="_blank"
+              rel="noreferrer noopener"
+            >
+              <BsWhatsapp />
+            </a>
+          </li>
 
-              <li>
-                <a
-                  href="https://wa.me/2348146557494"
-                  target="_blank"
-                  rel="noreferrer noopener"
-                >
-                  <BsWhatsapp />
-                </a>
-              </li>
-
-              <li>
-                <a
-                  href="https://x.com/SamVicCodes"
-                  target="_blank"
-                  rel="noreferrer noopener"
-                >
-                  <FaXTwitter />
-                </a>
-              </li>
-            </ul>
+          <li>
+            <a
+              href="https://x.com/SamVicCodes"
+              target="_blank"
+              rel="noreferrer noopener"
+            >
+              <FaXTwitter />
+            </a>
+          </li>
+        </ul>
 
         <div className="container footer-container">
           {/* <!--  --> */}
 
-
-
           <div className="footer-2">
-            <h4>Permalinks</h4>
+            <h4>Categories</h4>
 
             <ul className="links">
               <li>
-                <a href="/">Home</a>
+                <a href="/category">Web Development</a>
               </li>
               <li>
-                <a href="/about">About</a>
+                <a href="/category">Programming</a>
               </li>
               <li>
-                <a href="/gallery">Gallery</a>
+                <a href="/category">Investment</a>
               </li>
+           
+             
+
               <li>
-                <a href="/plans">Entertainment</a>
+                <a href="/category">Entertainment</a>
               </li>
 
               <li>
-                <a href="/trainers">Trainers</a>
+                <a href="/category">Politics</a>
               </li>
               <li>
-                <a href="/contact">Contact</a>
+                <a href="/category">Sports</a>
               </li>
             </ul>
           </div>
@@ -118,14 +116,25 @@ const Footer = () => {
               <li>
                 <a href="/contact">Support</a>
               </li>
+              <li>
+                <a href="/contact">Services</a>
+              </li>
             </div>
           </div>
 
-
           <div className="footer-4">
-            <h4>Get In Touch</h4>
+            <h4>Permalinks</h4>
 
             <div>
+              <li>
+                <a href="/category">Investment</a>
+              </li>
+              <li>
+                <a href="/category">Programming</a>
+              </li>
+              <li>
+                <a href="/category">Politics</a>
+              </li>
               <li>
                 <a href="/contact">Contact Us</a>
               </li>

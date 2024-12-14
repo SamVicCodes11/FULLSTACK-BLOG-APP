@@ -56,6 +56,10 @@ body {
   margin-inline: auto;
 }
 
+::-webkit-scrollbar {
+  width: 0;
+}
+
 img {
   display: block;
   object-fit: cover;

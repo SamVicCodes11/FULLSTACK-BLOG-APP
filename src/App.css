@@ -61,6 +61,7 @@
 
 .featured_container h2 {
   margin: 1rem 0;
+  text-transform: uppercase;
 }
 
 .featured_info p {
@@ -121,6 +122,11 @@
   background: var(--color-gray-900);
   margin-bottom: 2rem;
   color: var(--color-gray-300);
+}
+
+.blog_form i {
+  font-size: 1.3rem;
+  margin-top: 0.3rem;
 }
 
 .blog_form input {
@@ -196,6 +202,10 @@
   padding: 1rem 2rem 2rem;
 }
 
+.post_detail .post_author {
+  margin-top: 0;
+}
+
 .post_detail_head {
   display: flex;
   justify-content: space-between;
@@ -234,13 +244,13 @@
   margin-bottom: 5.5rem;
 }
 
-.log_in {
+/* .log_in {
   height: 100vh;
-}
+} */
 
-.sign_up {
+.form_section.sign_up {
   /* margin-bottom: 19rem; */
-  height: 100vh;
+  /* height: 120vh; */
 }
 
 .form_section {
@@ -248,7 +258,7 @@
   place-items: center;
   /* justify-content: center; */
   /* width: 100%; */
-  /* height: calc(100vh - 7rem); */
+  height: calc(100vh);
   /* overflow: hidden; */
 }
 
@@ -377,7 +387,8 @@ select {
   position: absolute;
   right: 0;
   bottom: 1rem;
-  font-size: 2rem;
+  font-size: 3rem;
+  color: var(--color-primary-variant);
 }
 
 .profile form {
@@ -749,6 +760,10 @@ select {
   margin-bottom: 3rem;
 }
 
+.sidebar {
+  display: none;
+}
+
 .dashboard_container {
   display: grid;
   grid-template-columns: 13rem auto;
@@ -845,8 +860,9 @@ select {
   /* PAGES WITH FORM */
 
   .create_post {
-    margin-bottom: 1rem;
-    height: calc(100vh - 4.5rem);
+    /* margin-bottom: 1rem; */
+    /* height: calc(100vh - 4.5rem); */
+    /* margin-top: -5rem; */
   }
 
   .profile_container {
@@ -860,6 +876,22 @@ select {
   .dashboard_container {
     grid-template-columns: 4rem auto;
     background: none;
+  }
+
+  .dashboard aside a {
+    justify-content: center;
+  }
+
+  .post_detail {
+    width: 70%;
+  }
+
+  .blog_form {
+    width: 50% !important;
+  }
+
+  .dashboard aside a:hover {
+    background: transparent;
   }
 }
 
@@ -877,10 +909,6 @@ select {
   .category_section_btns {
     grid-template-columns: repeat(2, 1fr);
   }
-
-  .post_detail {
-    width: 80%;
-  }
 }
 
 @media screen and (max-width: 700px) {
@@ -896,6 +924,12 @@ select {
   .dashboard_container {
     grid-template-columns: 1fr;
     flex-direction: column;
+    padding: 0;
+  }
+
+  .dashboard h2 {
+    margin-bottom: 1rem;
+    margin-left: 0.8rem;
   }
 
   .dashboard_container table tr {
@@ -903,12 +937,70 @@ select {
     flex-direction: column;
   }
 
-  .dashboard_container aside {
+  .dashboard_container table tr:nth-child(even) td {
+    background: var(--color-gray-900);
+  }
+
+  /* ================================= */
+
+  .no_side {
     position: fixed;
     top: 5rem;
-    left: 0;
-    /* height: 100vh; */
+    transition: var(--transition);
+    left: 100%;
+    bottom: 0;
+    height: 100vh;
     background: var(--color-primary);
+  }
+
+  .aside {
+    position: fixed;
+    top: 5rem;
+    transition: var(--transition);
+    left: 0;
+    bottom: 0;
+    height: 100vh;
+    background: var(--color-primary);
+  }
+
+  /* .aside {
+    left: 100%;
+  } */
+
+  /* .dashboard_container main {
+    width: 100%;
+  } */
+
+  .dashboard aside a {
+    justify-content: left;
+  }
+
+  .dashboard table th {
+    display: none;
+  }
+
+  .dashboard aside h4 {
+    display: block;
+  }
+
+  /* .open_sidebar,
+  .close_sidebar {
+    display: none;
+  } */
+
+  .sidebar {
+    display: inline-block;
+    background-color: var(--color-primary-variant);
+    border-radius: 50% 0 0 50%;
+    font-size: 1rem;
+    color: white;
+    cursor: pointer;
+    padding: 0.7rem;
+    box-shadow: -1rem 0 2rem rgba(0, 0, 0, 0.5);
+    position: fixed;
+    bottom: 3rem;
+    right: 0;
+    z-index: 1;
   }
 }
 
@@ -929,14 +1021,26 @@ select {
     width: 80% !important;
   }
 
-  .post_detail_head {
-    flex-direction: column;
+  .post_detail {
+    width: 95%;
+  }
+
+  .post_detail h2 {
+    font-size: 1.3rem;
+  }
+
+  .blog_form {
+    width: 80% !important;
   }
 }
 
 @media screen and (max-width: 500px) {
   .category_section_btns {
     grid-template-columns: 1fr;
+  }
+
+  .post_detail .btn {
+    padding: 0.3rem 0.5rem;
   }
 }
 
@@ -950,9 +1054,22 @@ select {
     width: 90%;
     margin-inline: auto;
   }
+
+  .category_page h2 {
+    font-size: 1.9rem;
+  }
+
+  .post_detail_head {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .delete_logout h2 {
+    font-size: 1.2rem;
+  }
 }
 
-/* ======================================== */
+/* =============== CONTACT AND ABOUT========== */
 
 @media screen and (max-width: 1024px) {
   /* =============  ACHIEVEMENTS ==================== */
@@ -1070,5 +1187,15 @@ select {
 
   form {
     margin-right: 0;
+  }
+
+  .contact form {
+    margin-right: 1rem;
+  }
+}
+
+@media screen and (max-width: 340px) {
+  .contact-container {
+    padding: 3rem 0.2rem;
   }
 }

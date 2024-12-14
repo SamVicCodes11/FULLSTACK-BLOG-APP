@@ -9,7 +9,7 @@ const PostItem = ({ Image, category, title, des }) => {
       </Link>
 
       <div className="post_right">
-        <Link className="category_btn">{category}</Link>
+        <Link to="/category" className="category_btn">{category}</Link>
 
         <Link to="/postdetail">
           <h3>{title}</h3>

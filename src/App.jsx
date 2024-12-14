@@ -89,7 +89,7 @@ const App = () => {
 
 
 
-        <Route path="/category/" element={<CategoryPage />} />
+        <Route path="/category" element={<CategoryPage />} />
         <Route path="*" element={<Category />} />
         <Route path="/logout" element={<LogOut />} />
         <Route path="/delete" element={<DeletePost />} />

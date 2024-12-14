@@ -1,16 +1,36 @@
 import { FaXTwitter } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 
+import { useState } from "react";
+import { FaChevronLeft } from "react-icons/fa6";
+import { FaChevronRight } from "react-icons/fa6";
+import { FaPenAlt } from "react-icons/fa";
+import { FaBabyCarriage } from "react-icons/fa6";
+import { FaUserPlus } from "react-icons/fa";
+import { HiUsers } from "react-icons/hi2";
+import { FaEdit } from "react-icons/fa";
+import { TiThList } from "react-icons/ti";
+
 const Dashboard = () => {
+  const [showSidebar, setShowSidebar] = useState(false);
+
+  const actionSidebar = () => {
+    setShowSidebar(() => !showSidebar);
+  };
+
   return (
     <section className="dashboard">
+      <i className="sidebar" onClick={actionSidebar}>
+        {/*  */}
+        {showSidebar ? <FaChevronRight /> : <FaChevronLeft />}
+      </i>
       <div className="container dashboard_container">
-        <aside>
+        <aside className={showSidebar ? "aside" : "no_side"}>
           <ul>
             <li>
               <Link to="/addpost">
                 <i>
-                  <FaXTwitter />
+                  <FaPenAlt />
                 </i>
                 <h4>Add Post</h4>
               </Link>
@@ -18,15 +38,16 @@ const Dashboard = () => {
             <li>
               <Link to="/dashboard">
                 <i>
-                  <FaXTwitter />
+                  <FaBabyCarriage />
                 </i>
-                <h4>Manage Posts</h4>
+
+                <h4>Manage Post</h4>
               </Link>
             </li>
             <li>
               <Link to="/adduser">
                 <i>
-                  <FaXTwitter />
+                  <FaUserPlus />
                 </i>
                 <h4>Add User</h4>
               </Link>
@@ -34,15 +55,15 @@ const Dashboard = () => {
             <li>
               <Link to="/manageuser">
                 <i>
-                  <FaXTwitter />
+                  <HiUsers />
                 </i>
-                <h4>Manage Users</h4>
+                <h4>Manage User</h4>
               </Link>
             </li>
             <li>
               <Link to="/addcategory">
                 <i>
-                  <FaXTwitter />
+                  <FaEdit />
                 </i>
                 <h4>Add Category</h4>
               </Link>
@@ -50,9 +71,9 @@ const Dashboard = () => {
             <li>
               <Link to="/managecategory" className="active">
                 <i>
-                  <FaXTwitter />
+                  <TiThList />
                 </i>
-                <h4>Manage Categories</h4>
+                <h4>Manage Category</h4>
               </Link>
             </li>
           </ul>

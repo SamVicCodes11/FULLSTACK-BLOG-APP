@@ -27,7 +27,7 @@ const CreatePost = () => {
           </div>
 
           <div className="cho_pic">
-            <label htmlFor="cho_pic">Upload your picture</label>
+            <label htmlFor="cho_pic">Upload a picture</label>
             <input type="file" name="" id="cho_pic" />
           </div>
 
