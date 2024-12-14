@@ -780,6 +780,10 @@ select {
   font-size: 0.82rem;
 }
 
+.dashboard aside {
+  z-index: 3;
+}
+
 .dashboard aside a {
   background: var(--color-primary);
   display: flex;

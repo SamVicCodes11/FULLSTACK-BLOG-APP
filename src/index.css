@@ -40,8 +40,8 @@
 body {
   background: var(--color-bg);
 
-  /* background: var(--color-bg) url("./images/bg_texture1.png"); */
-  background: var(--color-bg) url("./src/images/bg-texture.png");
+  background: var(--color-bg) url("./images/bg_texture1.png");
+  /* background: var(--color-bg) url("./src/images/bg-texture.png"); */
 
   font-family: "Poppins", sans-serif;
   color: var(--color-gray-200);
