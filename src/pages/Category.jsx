@@ -1,6 +1,13 @@
 import { Link } from "react-router-dom";
+import { useEffect } from "react";
+
 
 const Category = () => {
+    useEffect(() => {
+      window.scroll(0, 0);
+    }, []);
+
+
   return (
     <div className="category_section">
       <div className="container category_section_container">

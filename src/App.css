@@ -68,6 +68,10 @@
   color: var(--color-gray-200);
 }
 
+.featured_detail h4 {
+  margin-top: 1.5rem;
+}
+
 /* ====== POST AUTHOR ===== */
 .post_author {
   background: var(--color-primary-light);

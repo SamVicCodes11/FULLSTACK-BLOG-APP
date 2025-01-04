@@ -10,6 +10,8 @@ import { FaUserPlus } from "react-icons/fa";
 import { HiUsers } from "react-icons/hi2";
 import { FaEdit } from "react-icons/fa";
 import { TiThList } from "react-icons/ti";
+import { useEffect } from "react";
+
 
 const Dashboard = () => {
   const [showSidebar, setShowSidebar] = useState(false);
@@ -17,6 +19,13 @@ const Dashboard = () => {
   const actionSidebar = () => {
     setShowSidebar(() => !showSidebar);
   };
+
+    useEffect(() => {
+      window.scroll(0, 0);
+  
+    
+    }, []);
+
 
   return (
     <section className="dashboard">

@@ -9,16 +9,14 @@ const Post = () => {
       <section className="Post">
         <div className="container post_container">
           {DummyPosts.map((DummyPosts) => {
-            const { id, Image, category, title, des } = DummyPosts;
+            const { id, Image, category, title, des1 } = DummyPosts;
 
             const description =
-              des.length > 155 ? des.substring(0, 155) + "..." : des;
+              des1.length > 155 ? des1.substring(0, 155) + "..." : des;
 
             const postTitle =
-              title.length > 30 ? title.substring(0, 30) + "..." : title;
+              title.length > 28 ? title.substring(0, 28) + "..." : title;
 
-
-              
             return (
               <PostItem
                 key={id}
@@ -26,7 +24,7 @@ const Post = () => {
                 Image={Image}
                 category={category}
                 title={postTitle}
-                des={description}
+                des1={description}
               />
             );
           })}

@@ -6,11 +6,20 @@ import profileImage from "../images/MY PIC.jpg";
 import { IoMdCheckmarkCircle } from "react-icons/io";
 
 import { useState } from "react";
+import { useEffect } from "react";
+
 // import Dashboard from "./Dashboard";
 
 const Profile = () => {
   const [name, setName] = useState("SamVic Codes");
   const [email, setEmail] = useState("victorakpobasa2020@gmail.com");
+
+
+    useEffect(() => {
+      window.scroll(0, 0);
+  
+    
+    }, []);
 
   return (
     <section className="profile">

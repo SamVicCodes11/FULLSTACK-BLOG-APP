@@ -5,6 +5,9 @@ import PostAuthor from "../components/PostAuthor";
 import { HeadPost } from "../Data";
 
 const Featured = () => {
+
+
+
   return (
     // const {id, Image, category, title, des } = HeadPost
 
@@ -12,9 +15,11 @@ const Featured = () => {
       <section className="featured">
         {HeadPost.map((HeadPost) => {
           const { id, Image, category, title, des } = HeadPost;
+
+          
           return (
             <div className="container featured_container" key={id}>
-              <Link to="postdetail" className="post_image">
+              <Link to="featureddetail" className="post_image">
                 <img src={Image} alt="featuredImg" />
               </Link>
 
@@ -23,7 +28,7 @@ const Featured = () => {
                   {category}
                 </Link>
 
-                <Link className="featured_info" to="/postdetail">
+                <Link className="featured_info" to="/featureddetail">
                   <h2>{title}</h2>
 
                   <p>{des}</p>

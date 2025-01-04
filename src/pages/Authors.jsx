@@ -3,6 +3,7 @@ import { DummyAuthor } from "../Data";
 import Category from "./Category";
 import { Link } from "react-router-dom";
 
+
 const Authors = () => {
   // const [authors, setAuthors] = useState(DummyAuthor);
 
@@ -14,7 +15,7 @@ const Authors = () => {
 
           return (
 
-            <Link to="/authorspost" className="authors_wrapper" key={id}>
+            <Link to={`/authorspost`} className="authors_wrapper" key={id}>
               <div className="authors_img">
                 <img src={Image} alt="" />
               </div>

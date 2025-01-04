@@ -1,6 +1,15 @@
 import { Link } from "react-router-dom";
+import { useEffect } from "react";
+
 
 const AddPost = () => {
+
+    useEffect(() => {
+      window.scroll(0, 0);
+  
+    }, []);
+
+
   return (
     <section className="form_section">
       <div className="container form_section_container">

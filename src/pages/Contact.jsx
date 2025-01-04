@@ -1,7 +1,17 @@
 import React from 'react'
 import contactImage from "../images/contact.svg";
+import { useEffect } from "react";
+
 
 const Contact = () => {
+
+    useEffect(() => {
+      window.scroll(0, 0);
+  
+     
+    }, []);
+
+
   return (
     <section class="contact">
     <div class="container contact-container">

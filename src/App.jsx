@@ -26,7 +26,7 @@ import EditPost from "./pages/EditPost";
 import Adduser from "./pages/Adduser";
 import EditUser from "./pages/EditUser";
 
-// 
+//
 import Authors from "./pages/Authors";
 import Category from "./pages/Category";
 import CategoryPage from "./pages/CategoryPage";
@@ -47,8 +47,12 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 import CreatePost from "./pages/CreatePost";
 import AuthorsPost from "./pages/AuthorsPost";
+import { useEffect } from "react";
+import FeaturedDetail from "./pages/FeaturedDetail";
 
 const App = () => {
+ 
+
   return (
     <Router>
       <Header />
@@ -72,28 +76,28 @@ const App = () => {
         <Route path="/adduser" element={<Adduser />} />
         <Route path="/edituser" element={<EditUser />} />
 
-
         {/* MANAGEMENT */}
 
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/managecategory" element={<ManageCategory />} />
         <Route path="/manageuser" element={<ManageUser />} />
 
-
         {/*  */}
-        
+
         <Route path="/createpost" element={<CreatePost />} />
 
         <Route path="/authors" element={<Authors />} />
         <Route path="/authorspost" element={<AuthorsPost />} />
 
-
-
         <Route path="/category" element={<CategoryPage />} />
         <Route path="*" element={<Category />} />
         <Route path="/logout" element={<LogOut />} />
         <Route path="/delete" element={<DeletePost />} />
+
         <Route path="/postdetail" element={<PostDetail />} />
+        <Route path="/featureddetail" element={<FeaturedDetail />} />
+
+
         <Route path="*" element={<PostItem />} />
         <Route path="/profile" element={<Profile />} />
         <Route path="/login" element={<SignIn />} />

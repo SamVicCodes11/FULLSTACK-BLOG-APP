@@ -1,7 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { useEffect } from "react";
 
 const DeletePost = () => {
+    useEffect(() => {
+      window.scroll(0, 0);
+  
+    }, []);
+
   return (
     <section className="delete_logout">
       <h2>Post Delete Successful</h2>

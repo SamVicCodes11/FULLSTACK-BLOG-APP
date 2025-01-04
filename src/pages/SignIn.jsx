@@ -1,6 +1,18 @@
 import { Link } from "react-router-dom";
+import { useEffect } from "react";
+
+
 
 const SignIn = () => {
+
+    useEffect(() => {
+      window.scroll(0, 0);
+  
+     
+    }, []);
+
+
+
   return (
     <section className="form_section log_in">
       <div className="container form_section_container">
@@ -16,6 +28,8 @@ const SignIn = () => {
 
           <Link className="btn">Login</Link>
         </form>
+
+
 
         <small>
           Don't have an account? <Link to="/signup">Sign up</Link>
