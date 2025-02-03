@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 // import featuredImage from "../images/blog1.jpg";
 import PostAuthor from "../components/PostAuthor";
 import { HeadPost } from "../Data";
+// import headBlogImage1 from "../images/PIC.jpg;"
 
 const Featured = () => {
 

@@ -1,5 +1,8 @@
 import { Link } from "react-router-dom";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import ReactQuill from "react-quill";
+import "react-quill/dist/quill.snow.css";
+
 
 
 const CreatePost = () => {
@@ -9,6 +12,31 @@ const CreatePost = () => {
   
    
     }, []);
+
+
+    const [category, setCategory] = useState("Uncategorized");
+const [description, setDescription] = useState("");
+const [thumbnail, setThumbnail] = useState("");
+
+const modules = {
+  toolbar: [
+    [{ 'header': [1, 2, 3, 4 ,5, false] }],
+    ['bold', 'italic', 'underline', 'strike', 'blockquote'],
+    [{ 'list': 'ordered' }, { 'list': 'bullet' }, { 'indent': '-1' }, { 'indent': '+1' }],
+    ['link', 'image'],
+    ['clean']
+  ]
+};
+
+const formats = [
+  'header',
+  'bold', 'italic', 'underline', 'strike', 'blockquote',
+  'list', 'bullet', 'indent',
+  'link', 'image'
+];
+
+const POST_CATEGORIES = ["Agriculture", "Business", "Education", "Entertainment", "Art", "Investment", "Uncategorized", "Other"];
+
 
   return (
     <section className="form_section create_post">
@@ -24,11 +52,23 @@ const CreatePost = () => {
 
           <p>Category</p>
           <select name="" id="">
-            <option value="">food</option>
-            <option value="">wildlife</option>
+            
+              {
+                POST_CATEGORIES.map(option => {
+                  return (
+                    <option key={option}>{option}</option>
+                  )
+                })
+              }
+                
+              
+            
+          
           </select>
+          <ReactQuill theme="snow" value={description} onChange={setDescription} modules={modules} formats={formats} />
 
-          <textarea name="" rows="5" id="" placeholder="Body"></textarea>
+
+          {/* <textarea name="" rows="5" id="" placeholder="Body"></textarea> */}
 
           <div className="addpost_checkbox">
             <input type="checkbox" name="" id="featured_check" />

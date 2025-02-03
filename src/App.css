@@ -40,6 +40,10 @@
 .post_item:hover .post_image {
   filter: saturate(0);
   transition: filter 300ms ease;
+  -webkit-transition: filter 300ms ease;
+  -moz-transition: filter 300ms ease;
+  -ms-transition: filter 300ms ease;
+  -o-transition: filter 300ms ease;
 }
 
 /* .post_item {
@@ -1030,7 +1034,7 @@ select {
   }
 
   .post_detail {
-    width: 95%;
+    width: 100%;
   }
 
   .post_detail h2 {
@@ -1075,7 +1079,12 @@ select {
   .delete_logout h2 {
     font-size: 1.2rem;
   }
+
+  .post_detail {
+    padding: 1rem 0.5rem 2rem;
 }
+}
+
 
 /* =============== CONTACT AND ABOUT========== */
 

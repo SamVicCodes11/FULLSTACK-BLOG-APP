@@ -28,7 +28,22 @@ const PostDetail = () => {
       <div className="post_detail_container">
         {/* Header Section */}
         <div className="post_detail_head">
-          <PostAuthor />
+
+          {/* POST AUTHOR */}
+          <div className="post_author">
+            <Link to="/authorspost" className="post_author_wrapper">
+              <div className="post_author_img">
+                <img src={post.authorImage} alt="" />
+              </div>
+
+              <div className="post_author_info">
+                <h4>{post.authorName}</h4>
+
+                <small>{post.postTime}</small>
+              </div>
+            </Link>
+          </div>
+
           <div className="post_detail_btns">
             <Link to="/editpost" className="btn">
               Edit

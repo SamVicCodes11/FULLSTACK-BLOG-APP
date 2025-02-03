@@ -6,6 +6,8 @@ import { FaLinkedinIn } from "react-icons/fa6";
 import { BsWhatsapp } from "react-icons/bs";
 import { FaXTwitter } from "react-icons/fa6";
 
+
+
 const Footer = () => {
   return (
     <>

@@ -20,10 +20,10 @@ const AuthorsPost = () => {
         <h2>Author Posts</h2>
         <div className="container post_container category_page">
         {DummyPosts.map((DummyPosts) => {
-            const { id, Image, category, title, des1 } = DummyPosts;
+            const { id, Image,authorImage, authorName,postTime, category, title, des1 } = DummyPosts;
 
             const description =
-              des1.length > 155 ? des1.substring(0, 155) + "..." : des;
+              des1.length > 155 ? des1.substring(0, 155) + "..." : des1;
 
             const postTitle =
               title.length > 28 ? title.substring(0, 28) + "..." : title;
@@ -36,6 +36,9 @@ const AuthorsPost = () => {
                 category={category}
                 title={postTitle}
                 des1={description}
+                authorImage={authorImage}
+                authorName={authorName}
+                postTime={postTime}
               />
             );
           })}

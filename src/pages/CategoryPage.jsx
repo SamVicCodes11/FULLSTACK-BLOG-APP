@@ -21,7 +21,7 @@ const Post = () => {
         
         <div className="container post_container category_page">
         {DummyPosts.map((DummyPosts) => {
-            const { id, Image, category, title, des1 } = DummyPosts;
+            const { id, Image,authorImage,postTime,authorName, category, title, des1 } = DummyPosts;
 
             const description =
               des1.length > 155 ? des1.substring(0, 155) + "..." : des;
@@ -37,6 +37,9 @@ const Post = () => {
                 category={category}
                 title={postTitle}
                 des1={description}
+                authorImage={authorImage}
+                authorName={authorName}
+                postTime={postTime}
               />
             );
           })}

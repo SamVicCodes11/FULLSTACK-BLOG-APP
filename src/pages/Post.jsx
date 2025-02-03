@@ -2,14 +2,22 @@ import React from "react";
 // import featuredImage from "../images/blog1.jpg";
 import { DummyPosts } from "../Data";
 import PostItem from "./PostItem";
+import { useEffect } from "react";
+
 
 const Post = () => {
+
+  //  useEffect(() => {
+  //     window.scroll(0, 0);
+  //   }, []);
+
+
   return (
     <>
       <section className="Post">
         <div className="container post_container">
           {DummyPosts.map((DummyPosts) => {
-            const { id, Image, category, title, des1 } = DummyPosts;
+            const { id, Image,authorName,postTime,authorImage, category, title, des1 } = DummyPosts;
 
             const description =
               des1.length > 155 ? des1.substring(0, 155) + "..." : des;
@@ -25,6 +33,9 @@ const Post = () => {
                 category={category}
                 title={postTitle}
                 des1={description}
+                authorImage={authorImage}
+                authorName={authorName}
+                postTime={postTime}
               />
             );
           })}

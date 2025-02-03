@@ -1,6 +1,8 @@
 import React from "react";
-// import { DummyAuthor } from "../Data";
 import AuthorImage1 from "../images/MY PIC.jpg";
+
+
+
 import { Link } from "react-router-dom";
 
 const PostAuthor = () => {
@@ -8,8 +10,8 @@ const PostAuthor = () => {
     {
       id: 1,
       Image: AuthorImage1,
-      authorName: "SamVic Blog",
-      postTime: "December 13 2024",
+      authorName: "SamVic Codes",
+      postTime: "February 1 2025",
     },
   ];
 

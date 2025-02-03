@@ -84,7 +84,6 @@ h5 {
   line-height: 1.2;
 }
 
-
 h1 {
   font-size: 3rem;
 }
@@ -144,4 +143,64 @@ h4 {
 .btn:hover {
   background: var(--color-white);
   color: var(--color-bg) !important;
+}
+
+/* REACT QUILL */
+
+/* .quill {
+  border-color: red !important;
+  border-radius: .8rem !important;
+  -webkit-border-radius: .8rem !important;
+  -moz-border-radius: .8rem !important;
+  -ms-border-radius: .8rem !important;
+  -o-border-radius: .8rem !important;
+} */
+
+.ql-editor {
+  overflow: scroll;
+  background: var(--color-gray-900);
+  height: 8rem !important;
+  color: white !important;
+}
+
+.ql-toolbar {
+  /* background: #f4f4f4; */
+  border-radius: 8px 8px 0 0;
+}
+
+/* Change toolbar icons to white */
+.ql-toolbar button .ql-stroke,
+.ql-toolbar .ql-picker-label .ql-stroke,
+.ql-toolbar .ql-picker-item .ql-stroke {
+  stroke: white !important; /* Change icon color */
+}
+
+/* Change filled icons (like list bullets) to white */
+.ql-toolbar button .ql-fill,
+.ql-toolbar .ql-picker-label .ql-fill,
+.ql-toolbar .ql-picker-item .ql-fill {
+  fill: white !important;
+  transition: var(--transition);
+}
+
+
+/* Hover effect: Slightly dim the icons */
+.ql-toolbar button:hover .ql-stroke,
+.ql-toolbar .ql-picker-label:hover .ql-stroke,
+.ql-toolbar .ql-picker-item:hover .ql-stroke {
+  stroke: #007bff !important;
+}
+
+.ql-toolbar button:hover .ql-fill,
+.ql-toolbar .ql-picker-label:hover .ql-fill,
+.ql-toolbar .ql-picker-item:hover .ql-fill {
+  fill: #007bff !important;
+}
+
+.ql-snow .ql-picker {
+  color: white !important;
+}
+
+.ql-snow .ql-picker-options .ql-picker-item {
+  color: black;
 }

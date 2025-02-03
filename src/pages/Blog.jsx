@@ -17,12 +17,16 @@ const Post = () => {
 
   // }, []);
 
+
+
   const [searchPost, setSearchPost] = useState(DummyPosts);
 
   const filterPost = (e) => {
     const filteredPosts = DummyPosts.filter((post) => {
       return post.title.toLowerCase().includes(e.target.value.toLowerCase());
     });
+
+
 
     console.log(filteredPosts);
     setSearchPost(filteredPosts);
@@ -34,6 +38,10 @@ const Post = () => {
     justifyContent: 'center',
     width: "100%"
   };
+
+  
+
+
 
   return (
     // const {id, Image, category, title, des } = HeadPost
@@ -48,9 +56,9 @@ const Post = () => {
               <IoSearch />
             </i>
 
-            <input type="text" placeholder="Search" onChange={filterPost} />
+            <input type="text" placeholder="Search for post" onChange={filterPost} />
 
-            <button className="btn">Go</button>
+            {/* <button className="btn">Go</button> */}
           </form>
         </div>
 
@@ -59,7 +67,7 @@ const Post = () => {
             <h2 style={divStyle}>Post not found:)</h2>
           ) : (
             searchPost.map((DummyPosts) => {
-              const { id, Image, category, title, des1 } = DummyPosts;
+              const { id, Image,authorImage,authorName, category,postTime, title, des1 } = DummyPosts;
 
               const description =
                 des1.length > 155 ? des1.substring(0, 155) + "..." : des1;
@@ -74,6 +82,9 @@ const Post = () => {
                   category={category}
                   title={postTitle}
                   des1={description}
+                  authorImage={authorImage}
+                  authorName={authorName}
+                  postTime={postTime}
                 />
               );
             })

@@ -28,7 +28,7 @@ const Profile = () => {
 
         <div className="profile_dashboard">
           <Link to="/dashboard" className="btn">
-            My Dashboard
+            View Dashboard
           </Link>
         </div>
 
