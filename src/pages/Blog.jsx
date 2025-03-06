@@ -56,7 +56,7 @@ const Post = () => {
               <IoSearch />
             </i>
 
-            <input type="text" placeholder="Search for post" onChange={filterPost} />
+            <input type="text" placeholder="Search for post..." onChange={filterPost} />
 
             {/* <button className="btn">Go</button> */}
           </form>
